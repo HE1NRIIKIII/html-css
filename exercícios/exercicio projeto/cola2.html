@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Avançada de Estudo</title>
+  
+  <!-- Fonte do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Corpo da página */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Cabeçalho fixo */
+    header {
+      background: linear-gradient(to right, #4b6cb7, #182848);
+      color: white;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      justify-content: space-around;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Conteúdo principal com grid */
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    section {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    /* Estilo para tabela */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eee;
+    }
+
+    /* Formulário estilizado com validação */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea, select, button {
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #4b6cb7;
+      outline: none;
+    }
+
+    button {
+      background-color: #4b6cb7;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #3a5199;
+    }
+
+    /* Animação com keyframes */
+    .animado {
+      animation: girar 5s infinite linear;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    @keyframes girar {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Pseudo-elementos */
+    h2::after {
+      content: " 🔍";
+    }
+
+    /* Pseudo-classe */
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho com navegação -->
+  <header>
+    <h1>Estudo Avançado de HTML e CSS</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Corpo principal dividido em grid -->
+  <main>
+    <!-- Seção de conteúdo -->
+    <section>
+      <h2>Conteúdo Principal</h2>
+      <p>Essa seção contém uma tabela de exemplo:</p>
+
+      <!-- Tabela -->
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ana</td>
+            <td>ana@email.com</td>
+            <td>Ativo</td>
+          </tr>
+          <tr>
+            <td>João</td>
+            <td>joao@email.com</td>
+            <td>Inativo</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Exemplo de animação -->
+      <div class="animado">Animando...</div>
+    </section>
+
+    <!-- Seção lateral com formulário -->
+    <section>
+      <h2>Formulário</h2>
+      <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required placeholder="Digite seu nome">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" rows="4" required></textarea>
+
+        <label for="opcao">Opção:</label>
+        <select id="opcao">
+          <option value="a">Opção A</option>
+          <option value="b">Opção B</option>
+        </select>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Rodapé simples -->
+  <footer style="text-align: center; padding: 10px; background: #182848; color: white;">
+    &copy; 2025 - Página Avançada para Estudos
+  </footer>
+
+</body>
+</html>

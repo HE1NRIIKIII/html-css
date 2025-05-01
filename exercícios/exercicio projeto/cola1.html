@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título da página com ícone personalizado -->
+    <title>Página de Estudo Avançado</title>
+    
+    <!-- Link para ícones do Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos CSS personalizados -->
+    <style>
+        /* Variáveis CSS para reutilização */
+        :root {
+            --cor-primaria: #2c3e50;
+            --cor-secundaria: #3498db;
+            --cor-texto: #333;
+            --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Reset básico e estilos globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.6;
+            color: var(--cor-texto);
+            background: #f5f6fa;
+        }
+
+        /* Header estilizado com gradiente */
+        header {
+            background: linear-gradient(135deg, var(--cor-primaria), #2980b9);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--sombra);
+            position: relative;
+        }
+
+        /* Navegação principal com Flexbox */
+        .nav-principal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Menu dropdown avançado */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-conteudo {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 200px;
+            box-shadow: var(--sombra);
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-conteudo {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Grid layout para conteúdo principal */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        /* Cards estilizados com hover effect */
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            box-shadow: var(--sombra);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Formulário complexo com estilização */
+        .form-grupo {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-input:focus {
+            border-color: var(--cor-secundaria);
+            outline: none;
+        }
+
+        /* Animações com keyframes */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .icone-carregando {
+            animation: spin 10s cubic-bezier(0.175, 0.885, 0.32, 1.275)  infinite;
+        }
+
+        /* Media queries para responsividade */
+        @media (max-width: 768px) {
+            .nav-principal {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Estilos para modo escuro (CSS moderno) */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: #1a1a1a;
+                color: #fff;
+            }
+
+            .card {
+                background: #2d2d2d;
+            }
+        }
+
+        /* Pseudo-elementos e seletores avançados */
+        .lista-especial li:nth-child(odd) {
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        .botao-destaque::after {
+            content: "→";
+            margin-left: 0.5rem;
+            transition: margin-left 0.3s ease;
+        }
+
+        .botao-destaque:hover::after {
+            margin-left: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navegação principal -->
+    <nav class="nav-principal">
+        <div class="logo">Logo</div>
+        
+        <!-- Menu dropdown -->
+        <div class="dropdown">
+            <button class="botao-menu">Menu <i class="fas fa-caret-down"></i></button>
+            <div class="dropdown-conteudo">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cabeçalho hero -->
+    <header>
+        <h1>Página de Estudo Avançado</h1>
+        <p>Explore os recursos modernos de HTML e CSS</p>
+    </header>
+
+    <!-- Conteúdo principal com grid -->
+    <main class="grid-container">
+        <article class="card">
+            <h2>Recursos HTML5</h2>
+            <ul class="lista-especial">
+                <li>Semântica avançada</li>
+                <li>Elementos multimídia</li>
+                <li>Formulários modernos</li>
+            </ul>
+        </article>
+
+        <section class="card">
+            <h2>Recursos CSS3</h2>
+            <div class="icone-carregando">
+                <i class="fas fa-sync fa-2x"></i>
+            </div>
+            <p>Animações, Grid, Flexbox e mais</p>
+        </section>
+
+        <!-- Formulário complexo -->
+        <form class="card">
+            <div class="form-grupo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" class="form-input" required>
+            </div>
+
+            <div class="form-grupo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-input" required>
+            </div>
+
+            <button type="submit" class="botao-destaque">Enviar</button>
+        </form>
+    </main>
+
+    <!-- Rodapé estilizado -->
+    <footer style="background: var(--cor-primaria); color: white; padding: 2rem; text-align: center;">
+        <p>&copy; 2023 Página de Estudo. Todos os direitos reservados.</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

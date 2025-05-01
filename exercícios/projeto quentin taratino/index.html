@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Mundo de Quentin Tarantino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="home">
+        <h1>O Mundo de Quentin Tarantino</h1>
+        <p>Explore a vida, a obra e a genialidade de um dos maiores cineastas da história.</p>
+        <a href="#documentario" class="btn">Assista Agora</a>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Quentin Tarantino</h2>
+        <img src="tarantino.jpg" alt="Quentin Tarantino" class="tarantino-img">
+        <p>Quentin Tarantino nasceu em 1963, nos Estados Unidos. Seu estilo único mistura violência gráfica, diálogos marcantes e referências culturais pop. Entre seus filmes mais icônicos estão <em>Pulp Fiction</em>, <em>Kill Bill</em> e <em>Django Livre</em>.</p>
+    </section>
+
+    <section id="documentario">
+        <h2>Mini Documentário</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ExemploDeVideo" title="Mini Documentário Quentin Tarantino" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="filmografia">
+        <h2>Filmografia Detalhada</h2>
+
+        <div class="tab-buttons">
+            <button class="tab-btn" onclick="showTab('cachorros')">Cães de Aluguel</button>
+            <button class="tab-btn" onclick="showTab('pulp')">Pulp Fiction</button>
+            <button class="tab-btn" onclick="showTab('killbill')">Kill Bill</button>
+            <button class="tab-btn" onclick="showTab('bastardos')">Bastardos Inglórios</button>
+            <button class="tab-btn" onclick="showTab('django')">Django Livre</button>
+        </div>
+
+        <div class="tab-content" id="cachorros">
+            <img src="caes_de_aluguel.jpg" alt="Cães de Aluguel" class="filme-img">
+            <p><strong>Cães de Aluguel (1992)</strong><br>
+            Filmado com um orçamento limitado de apenas 1,2 milhão de dólares, "Cães de Aluguel" surgiu da paixão de Tarantino por roteiros não-lineares e diálogos afiados. Rodado em locações simples para economizar, o filme inaugurou seu estilo único de violência elegante e personagens intensos.</p>
+        </div>
+
+        <div class="tab-content" id="pulp">
+            <img src="pulp_fiction.jpg" alt="Pulp Fiction" class="filme-img">
+            <p><strong>Pulp Fiction (1994)</strong><br>
+            "Pulp Fiction" redefiniu o cinema independente. Com estrutura narrativa não-linear e personagens inesquecíveis, foi escrito em um pequeno apartamento enquanto Tarantino assistia filmes antigos e lia revistas pulp. A produção se destacou pela liberdade criativa dada a Tarantino pela Miramax.</p>
+        </div>
+
+        <div class="tab-content" id="killbill">
+            <img src="kill_bill.jpg" alt="Kill Bill" class="filme-img">
+            <p><strong>Kill Bill Vol. 1 e 2 (2003, 2004)</strong><br>
+            "Kill Bill" nasceu da obsessão de Tarantino pelo cinema de kung fu e westerns spaghetti. Filmado como um único filme e dividido em duas partes, ele explorou novas técnicas de filmagem, desde animações estilo anime até intensas cenas de combate coreografadas no Japão e China.</p>
+        </div>
+
+        <div class="tab-content" id="bastardos">
+            <img src="bastardos_inglorios.jpg" alt="Bastardos Inglórios" class="filme-img">
+            <p><strong>Bastardos Inglórios (2009)</strong><br>
+            Após anos planejando, Tarantino escreveu "Bastardos Inglórios" como uma carta de amor aos filmes de guerra e ao cinema europeu. Christoph Waltz foi uma descoberta transformadora para o filme, e a produção utilizou locações autênticas na França e Alemanha para criar sua atmosfera única.</p>
+        </div>
+
+        <div class="tab-content" id="django">
+            <img src="django_livre.jpg" alt="Django Livre" class="filme-img">
+            <p><strong>Django Livre (2012)</strong><br>
+            Inspirado por antigos filmes de faroeste italianos, "Django Livre" trouxe uma abordagem estilizada e brutal para o tema da escravidão americana. Tarantino escreveu o roteiro como um presente para o ator Jamie Foxx, utilizando trilhas sonoras pouco convencionais para acentuar cada cena.</p>
+        </div>
+
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form>
+            <input type="text" placeholder="Seu nome" required>
+            <input type="email" placeholder="Seu e-mail" required>
+            <textarea placeholder="Sua mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 Mini Documentário Quentin Tarantino. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
