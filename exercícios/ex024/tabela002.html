@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uso de tabelas grandes</title>
+    <style>
+        :root{
+            font-family: Verdana, Geneva, Tahoma;
+        }
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: grey;
+            color: white;
+            text-transform: uppercase;
+        }
+        table {
+            border-collapse: collapse;
+            position: relative;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        thead {
+            background-color: grey;
+            color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: grey;
+        }
+        tbody > tr:nth-child(odd){
+            background-color: rgb(134, 134, 134);
+        }
+        tbody > tr:nth-child(even){
+            background-color: rgb(202, 202, 202);
+        }
+        /*tbody > tr:nth-child(2n){
+            background-color: bisque;
+        }*/
+        td.num{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES 
+            TABLE
+                CAPTION
+                THEAD
+                    TR,TD,TH
+                TBODY
+                    TR,TD,TH
+                TFOOT
+                    TR,TD,TH
+    -->
+    <table>
+        <caption><strong>população das 10 federações mais habitadas do mundo</strong></caption>
+        <thead>
+            <tr>
+                <th scope="col">País</th>
+                <th scope="col">população</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Índia</td>
+                <td class="num">1 429 921 746</td>
+            </tr>
+            <tr>
+                <td>China</td>
+                <td class="num">1 426 391 281</td>
+            </tr>
+            <tr>
+                <td>Estados Unidos</td>
+                <td class="num">346 353 341</td>
+            </tr>
+            <tr>
+                <td>Indonésia</td>
+                <td class="num">277 184 719</td>
+            </tr>
+            <tr>
+                <td>Paquistão</td>
+                <td class="num">240 215 932</td>
+            </tr>
+            <tr>
+                <td>Nigéria</td>
+                <td class="num">223 899 057</td>
+            </tr>
+            <tr>
+                <td>Brasil</td>
+                <td class="num">203 493 629</td>
+            </tr>
+            <tr>
+                <td>Bangladesh</td>
+                <td class="num">172 452 382</td>
+            </tr>
+            <tr>
+                <td>Rússia</td>
+                <td class="num">146 140 931</td>
+            </tr>
+            <tr>
+                <td>México</td>
+                <td class="num">134 127 189</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">total de habitantes</th>
+                <td class="num"><strong>4.600.180.207</strong></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
