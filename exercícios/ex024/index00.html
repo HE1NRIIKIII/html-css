@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  width: 100%;
+  border-collapse: separate;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Estilo para as células de cabeçalho */
+th {
+  background-color: #f2f2f2;
+}
+
+/* Estilo zebrado para células de dados nas linhas normais */
+tbody tr:nth-child(odd) td:nth-child(-n+7) { /* Seleciona as 7 primeiras células (Area até Média) */
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(even) td:nth-child(-n+7) {
+  background-color: #ffffff;
+}
+
+/* Estilo para as linhas de média de exatas e humanas */
+tbody tr:nth-child(6) th, /* Média de exatas */
+tbody tr:nth-child(6) td,
+tbody tr:nth-child(9) th, /* Média de humanas */
+tbody tr:nth-child(9) td {
+  background-color: #e0f7fa; /* Um azul bem claro para destacar */
+}
+
+/* Opcional: Estilo ao passar o mouse nas linhas de dados */
+tbody tr:not(:last-child):not(:nth-last-child(2)):hover td { /* Exclui as duas últimas linhas */
+  background-color: #ddd;
+}
+</style>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="2" rowspan="2">
+                    Área
+                </th>
+                <th colspan="2" rowspan="2">
+                    Disciplinas
+                </th>
+                <th colspan="2">
+                    Notas
+                </th>
+                <Th rowspan="2">
+                    Média
+                </Th>
+            </tr>
+            <tr class="l1">
+                <th>
+                    Nota 1
+                </th>
+                <th>
+                    Nota 2
+                </th>
+            </tr>
+            <tr>
+                <th rowspan="4" colspan="2">
+                    Exatas
+                </th>
+                <td colspan="2">
+                    Matemática
+                </td>
+                <td>
+                    00
+                </td>
+                <td>
+                    00
+                </td>
+                <td>
+                    00
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Fisíca
+                </td>
+                <td>
+                    00
+                </td>
+                <td>
+                    00
+                </td>
+                <td>
+                    00
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Química
+                </td>
+                <td>
+                    00
+                </td>
+                <td>
+                    00
+                </td>
+                <td>
+                    00
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Biología
+                </td>
+                <td>
+                    00
+                </td>
+                <td>
+                    00
+                </td>
+                <td>
+                    00
+                </td>
+            </tr>
+            <tr>
+                <th colspan="6">
+                    Media de exatas
+                </th>
+                <td>00</td>
+            </tr>
+            <tr>
+                <th colspan="2" rowspan="2">
+                    Humanas
+                </th>
+                <td colspan="2">
+                    Historia
+                </td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Geografia
+                </td>
+                <td>00</td>
+                <td>00</td>
+                <td>00</td>
+            </tr>
+            <tr>
+                <th colspan="6">
+                    Média de Humanas
+                </th>
+                <td>00</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
